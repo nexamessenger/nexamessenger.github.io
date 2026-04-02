@@ -1694,7 +1694,7 @@ function showConvCtxMenu(e,id,name){
   menu.style.top=Math.min(y,window.innerHeight-200)+'px';
 
   const isFav=favConvs.has(id);
-  addCtxItem(menu,isFav?'★ Remove from Favourites':'☆ Add to Favourites','⭐',()=>{
+  addCtxItem(menu,isFav?'Remove from Favourites':'Add to Favourites','⭐',()=>{
     if(isFav){favConvs.delete(id);}else{favConvs.add(id);}
     localStorage.setItem('fav_convs',JSON.stringify([...favConvs]));
     renderSidebarList();
